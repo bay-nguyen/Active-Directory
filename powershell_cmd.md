@@ -9,7 +9,7 @@ Get-ADObject -LDAPFilter "(objectClass=organizationalUnit)" -Properties * | Expo
 Get-ADObject -Filter 'ObjectClass -eq "organizationalUnit"' -Properties * | Export-Csv <出力先.csv> -Encoding Default
 ```
 
-# コンピューター情報取得（以下いずれでも情報取得できる）
+# コンピューター情報取得（以下いずれかのコマンドで情報取得できる）
 ```
 Get-ADComputer -Filter * -SearchBase "OU=xxx,OU=Clients,DC=ドメイン,DC=co,DC=jp" | fl
 Get-ADComputer -Filter "Name -eq 'computerName'" | fl
@@ -24,4 +24,6 @@ Get-GPO -all | select DisplayName
 ```
 Get-GPOReport -Name <GPOの名前> Html -Path "<出力先>.html"
 ```
+
+
 
