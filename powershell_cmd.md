@@ -22,5 +22,20 @@ Get-GPO -all | select DisplayName
 Get-GPOReport -Name <GPOの名前> Html -Path "<出力先>.html"
 ```
 
+## サイト一覧
+```
+Get-ADReplicationSite -Filter *
+```
+
+## サイトリンク一覧
+```
+Get-ADReplicationSiteLink -Filter *
+```
+## サブネット
+```
+Get-ADReplicationSubnet -Filter *
+```
+
+
 
 
