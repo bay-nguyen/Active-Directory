@@ -10,7 +10,7 @@ Get-ADObject -LDAPFilter "(objectClass=organizationalUnit)" -Properties * | Expo
 
 ## コンピューター情報取得
 ```
-Get-ADComputer -Filter * -SearchBase "OU=xxx,OU=Clients,DC=ドメイン,DC=co,DC=jp" | fl
+Get-ADComputer -Filter "Name -eq 'computerName'" | fl
 ```
 ## GPO名を一覧表示する
 ```
