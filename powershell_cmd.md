@@ -8,16 +8,16 @@ Get-ADObject -LDAPFilter "(objectClass=organizationalPerson)" -Propertie * | Exp
 Get-ADObject -LDAPFilter "(objectClass=organizationalUnit)" -Properties * | Export-Csv  <出力先.csv> -Encoding Default
 ```
 
-## コンピューター情報取得
+## コンピューター情報
 ```
 Get-ADComputer -Filter "Name -eq 'computerName'" | fl
 ```
-## GPO名を一覧表示する
+## GPO名一覧
 ```
 Get-GPO -all | select DisplayName
 ```
 
-## 特定GPOの情報を取得する
+## 特定GPOの情報
 ```
 Get-GPOReport -Name <GPOの名前> Html -Path "<出力先>.html"
 ```
