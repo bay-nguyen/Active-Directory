@@ -6,14 +6,11 @@ Get-ADObject -LDAPFilter "(objectClass=organizationalPerson)" -Propertie * | Exp
 # OU一覧
 ```
 Get-ADObject -LDAPFilter "(objectClass=organizationalUnit)" -Properties * | Export-Csv  <出力先.csv> -Encoding Default
-Get-ADObject -Filter 'ObjectClass -eq "organizationalUnit"' -Properties * | Export-Csv <出力先.csv> -Encoding Default
 ```
 
-# コンピューター情報取得（以下いずれかのコマンドで情報取得できる）
+# コンピューター情報取得
 ```
 Get-ADComputer -Filter * -SearchBase "OU=xxx,OU=Clients,DC=ドメイン,DC=co,DC=jp" | fl
-Get-ADComputer -Filter "Name -eq 'computerName'" | fl
-Get-ADComputer -Filter "Name -like '*computerName*'" | fl
 ```
 # GPO名を一覧表示する
 ```
